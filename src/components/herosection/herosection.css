@@ -1,0 +1,10 @@
+.background-img img{
+   margin-top: 80px;
+   margin-left: 15rem;
+}
+
+@media  screen and (max-width: 1080px) {
+   .background-img{
+      background-size: cover;
+   }
+}
