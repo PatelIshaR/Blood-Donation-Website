@@ -2,6 +2,9 @@
    margin-top: 80px;
    margin-left: 15rem;
 }
+/* .background-img {
+   background-color: #e23457;
+} */
 
 @media  screen and (max-width: 1080px) {
    .background-img{
