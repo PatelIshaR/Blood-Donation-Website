@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './card.css'
 
 function Card(){
@@ -40,11 +40,7 @@ function Card(){
 
             </div>
           </div>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
-          <h1>Hello</h1>
+          
         </>
     )
 }

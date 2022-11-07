@@ -1,3 +1,4 @@
+
 .NavbarItems {
     width: 100%;
     position: fixed;
@@ -30,14 +31,18 @@
     font-weight: 580;
 }
 
-.nav-item{
+/* .nav-item{
     color: #c6414c;
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
 
+a{
+    color: #C6414C;
+} */
+
 .nav-item:hover{
-    background-color: #C6414C;
+    background-color: #ffb3b9;
     border-radius: 4px;
     transition: all 0.2s ease-out;
     color: white;
