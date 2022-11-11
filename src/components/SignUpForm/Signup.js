@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import '../SignUpForm/signup.css';
 // import '../SignUpForm/sign'
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 export default class Signup extends Component {
   constructor(props) {
@@ -138,7 +139,7 @@ export default class Signup extends Component {
                     </div>
                     <div class="signup-image">
                         <figure><img src="images/blood-donation.jpg" alt="sing up image"/></figure>
-                        <a href="#" class="signup-image-link">I am already member</a>
+                        <NavLink to="/login" class="signup-image-link">I am already member</NavLink>
                     </div>
                 
             </div>

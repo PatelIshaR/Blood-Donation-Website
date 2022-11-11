@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // import '../SignUpForm/signup.css';
 // import '../SignUpForm/sign'
-// import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import axios from 'axios';
 
 export default class Signin extends Component {
@@ -42,6 +42,9 @@ export default class Signin extends Component {
 
     axios.post('http://localhost:5000/users/signin', user)
       .then(res => console.log(res.data));
+      
+      window.location.href = "/";
+    
 
       this.setState({
         email: '',
@@ -49,11 +52,9 @@ export default class Signin extends Component {
       })
 
       
+      
     }
-    goToSignUp(){
-      // const navigate = useNavigate();
-      // navigate('/')
-    }
+
     render() {
         return(
             <>
@@ -62,7 +63,7 @@ export default class Signin extends Component {
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="images/signin-image.jpg" alt="sing up image"/></figure>
-                        <button class="signup-image-link" onClick={this.goToSignUp}>Create an account</button>
+                        <NavLink to="/signup" class="signup-image-link">Create an account</NavLink>
                     </div>
 
                     <div class="signin-form">

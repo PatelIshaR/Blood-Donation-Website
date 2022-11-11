@@ -50,10 +50,10 @@ router.post('/signin', async (req, res) => {
         // const isMatch = await User.match(password, userLogin.password);
 
         if(!userLogin) {
-            res.json({error: "Invalid credential"});
+            res.send({error: "Invalid credential"});
+            
         } else {
             res.send({message: "User signin successfully"});
-            Navigate('/')
         }
         
     } catch (err) {
