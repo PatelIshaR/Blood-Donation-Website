@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react';
 import Navbar from "./components/Navbar/Navbar"
 import Home from "./components/home/Home"
+import Signin from './components/SignUpForm/Signin';
 import Herosection from './components/herosection/Herocection';
 import Card from './components/card/Card';
 import Signup from './components/SignUpForm/Signup';
@@ -27,8 +28,8 @@ function App() {
        <Route path="/" index element={<Home/>} />
        <Route path="/about" element={<About/>} />
        <Route path="/blood" element={<Blood/>} />
-       <Route path="/login" element={<Signup/>} />
-       <Route path="/camp" element={<Camp/>} />
+       <Route path="/login" element={<Signin/>} />
+       <Route path="/camp" element={<Camp/>} />                   
       </Routes>
       </>
     )

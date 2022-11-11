@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// import '../SignUpForm/signup.css';
+// import '../SignUpForm/sign'
 import axios from 'axios';
 
 export default class Signup extends Component {
@@ -88,68 +90,59 @@ export default class Signup extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Create New User</h3>
-        <form onSubmit={this.onSubmit}>
-          <div className="form-group"> 
-            <label>Username: </label>
-            <input  type="text"
-                required
-                className="form-control"
-                value={this.state.username}
-                onChange={this.onChangeUsername}
-                />
-          </div>
-          <div className="form-group"> 
-            <label>Gender: </label>
-            <input  type="text"
-                required
-                className="form-control"
-                value={this.state.gender}
-                onChange={this.onChangeGender}
-                />
-          </div>
-          <div className="form-group"> 
-            <label>Age: </label>
-            <input  type="text"
-                required
-                className="form-control"
-                value={this.state.age}
-                onChange={this.onChangeAge}
-                />
-          </div>
-          <div className="form-group"> 
-            <label>Mobile: </label>
-            <input  type="text"
-                required
-                className="form-control"
-                value={this.state.mobile}
-                onChange={this.onChangeMobile}
-                />
-          </div>
-          <div className="form-group"> 
-            <label>Email: </label>
-            <input  type="text"
-                required
-                className="form-control"
-                value={this.state.email}
-                onChange={this.onChangeEmail}
-                />
-          </div>
-          <div className="form-group"> 
-            <label>Password: </label>
-            <input  type="password"
-                required
-                className="form-control"
-                value={this.state.password}
-                onChange={this.onChangePassword}
-                />
-          </div>
-          <div className="form-group">
-            <input type="submit" value="Create User" className="btn btn-primary" />
-          </div>
-        </form>
-      </div>
+      <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" class="register-form" id="register-form" onSubmit={this.onSubmit}>
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name" value={this.state.username}
+                onChange={this.onChangeUsername}/>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender"><i class="zmdi zmdi-email"></i></label>
+                                <input type="text" name="gender" id="gender" placeholder="Your gender" value={this.state.gender}
+                onChange={this.onChangeGender}/>
+                            </div>
+                            <div class="form-group">
+                                <label for="age"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="text" name="age" id="age" placeholder="age" value={this.state.age}
+                onChange={this.onChangeAge}/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="mobile" name="mobile" id="mobile" placeholder="mobile" value={this.state.mobile}
+                onChange={this.onChangeMobile}/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="email" name="email" id="email" placeholder="email" value={this.state.email}
+                onChange={this.onChangeEmail}/>
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="password" id="password" placeholder="password" value={this.state.password}
+                onChange={this.onChangePassword}/>
+                            </div>
+                            {/* <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div> */}
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/blood-donation.jpg" alt="sing up image"/></figure>
+                        <a href="#" class="signup-image-link">I am already member</a>
+                    </div>
+                
+            </div>
+        </section>
     )
   }
 }

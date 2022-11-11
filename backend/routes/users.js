@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Navigate } = require('react-router-dom');
 let User = require('../models/user.model');
 
 router.route('/').get((req, res) => {
@@ -51,7 +52,8 @@ router.post('/signin', async (req, res) => {
         if(!userLogin) {
             res.json({error: "Invalid credential"});
         } else {
-            res.json({message: "User signin successfully"});
+            res.send({message: "User signin successfully"});
+            Navigate('/')
         }
         
     } catch (err) {
