@@ -1,0 +1,24 @@
+.mainRow {
+    color: white;
+    background-color: red;
+    text-align: center;
+    font-size: 21px;
+}
+
+.table-responsive {
+    display: block;
+    text-align: center;
+    /* justify-content: center;
+    width: 110%; */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.sStyle {
+    color: #961e1b;
+}

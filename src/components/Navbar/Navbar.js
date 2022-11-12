@@ -39,7 +39,8 @@ class Navbar extends Component {
 
     handleLogout = () => {
 		localStorage.removeItem("token");
-		window.location.reload();
+		// window.location.reload();
+        window.location.href = ('/login')
 	};
 
     render() {

@@ -1,5 +1,7 @@
 .box{
     background-color: #C6414C;
-    border: 1px solid black;
-    align-items: flex-start;
+}
+
+.container{
+    height: 300px;
 }

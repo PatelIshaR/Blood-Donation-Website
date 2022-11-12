@@ -30,6 +30,9 @@ app.use('/api/auth', authRouter)
 const banksRouter = require('./routes/banks');
 app.use('/banks', banksRouter);
 
+const campsRouter = require('./routes/camp')
+app.use('/camps', campsRouter);
+
 app.listen(port, () => {
     console.log(`server is running on port: ${port}`);
 });

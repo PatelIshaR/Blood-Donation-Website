@@ -1,13 +1,8 @@
 import React from 'react';
 import { Route, Routes, Navigate } from "react-router-dom";
-// import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react';
-import Navbar from "./components/Navbar/Navbar"
 import Home from "./components/home/Home"
 import Login from './components/Login/login';
-// import Signin from './components/SignUpForm/Signin';
-import Herosection from './components/herosection/Herocection';
-import Card from './components/card/Card';
 import Signup from './components/SignUp/Signup';
 import About from './components/About Us/About';
 import Blood from './components/blood/Blood';
@@ -34,7 +29,8 @@ function App() {
        <Route path="/login" index element={<Login/>} />
        <Route path="/camp" element={<Camp/>} />   
        <Route path='/signup' element={<Signup />} /> 
-       <Route path="/home" element={<Navigate replace to="/login" />} />               
+       {/* <Route path="/home" element={<Navigate replace to="/login" />} />  
+       <Route path="/blood" element={<Navigate replace to="/login" />} />                */}
       </Routes>
       </>
     )

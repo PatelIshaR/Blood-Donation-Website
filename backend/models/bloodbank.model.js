@@ -16,8 +16,12 @@ const bankSchema = new Schema({
     type: String,
     require: true,
   },
-  contact: {
-    type: Number,
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
     required: true
   }
 });
