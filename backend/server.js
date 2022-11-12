@@ -22,7 +22,10 @@ connection.once('open', () => {
 })
 
 const usersRouter = require('./routes/users');
-app.use('/users', usersRouter);
+app.use('/api/users', usersRouter);
+
+const authRouter = require('./routes/auth')
+app.use('/api/auth', authRouter)
 
 const banksRouter = require('./routes/banks');
 app.use('/banks', banksRouter);

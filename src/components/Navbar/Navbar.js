@@ -36,6 +36,12 @@ class Navbar extends Component {
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
     }
+
+    handleLogout = () => {
+		localStorage.removeItem("token");
+		window.location.reload();
+	};
+
     render() {
         return(
             
@@ -48,7 +54,7 @@ class Navbar extends Component {
                 </div>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     <li class="nav-item">
-                        <Link to="/" class="nav-link" style={{color: '#c6414c'}}>Home</Link>
+                        <Link to="/home" class="nav-link" style={{color: '#c6414c'}}>Home</Link>
                     </li>
                     <li class="nav-item">
                         <Link to="/about" class="nav-link" style={{color: '#c6414c'}}>About us</Link>
@@ -56,12 +62,15 @@ class Navbar extends Component {
                     <li class="nav-item">
                         <Link to="/blood" class="nav-link" style={{color: '#c6414c'}}>Looking for blood</Link>
                     </li>
-                    <li class="nav-item">
+                    {/* <li class="nav-item">
                         <Link to="/login" class="nav-link" style={{color: '#c6414c'}}>Donor login</Link>
-                    </li>
+                    </li> */}
                     <li class="nav-item">
                         <Link to="/camp" class="nav-link" style={{color: '#c6414c'}}>Blood camp</Link>
                     </li>    
+                    <li class="nav-item">
+                        <Link to="/login" class="nav-link" style={{color: '#c6414c'}} onClick={this.handleLogout}>Logout</Link>
+                    </li>   
                 </ul>
             </nav>
         

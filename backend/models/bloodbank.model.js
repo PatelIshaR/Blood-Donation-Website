@@ -15,6 +15,10 @@ const bankSchema = new Schema({
   address: {
     type: String,
     require: true,
+  },
+  contact: {
+    type: Number,
+    required: true
   }
 });
 
